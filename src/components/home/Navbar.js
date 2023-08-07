@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Navbar.css';
+import "./Navbar.css";
+import Profile from "../Profile/Profile";
 
 export const Navbar = () => {
   return (
@@ -8,6 +9,7 @@ export const Navbar = () => {
       <div className="links">
         <Link to="/"> Shop </Link>
         <Link to="/cart">cart</Link>
+        <Link to="/profile">Profile</Link>
       </div>
     </div>
   );
