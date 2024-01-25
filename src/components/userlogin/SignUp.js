@@ -39,14 +39,13 @@ function Registration() {
   }
 
   return (
-    <>
-      <div className="container">
-        {" "}
-        {login ? (
-          <form onSubmit={handleFormSubmit}>
-            <h3>Register</h3>
-
-            <div className="form-group">
+    <div className="container">
+      {login ? (
+        <div className="from-ui">
+          <h2 className="heading">Create Account</h2>
+          <h3 style={{ marginRight: "355px" }}>Register</h3>
+          <form className="signup-form" onSubmit={handleFormSubmit}>
+            <div className="name">
               <label>Name</label>
               <input
                 type="text"
@@ -57,7 +56,7 @@ function Registration() {
               />
             </div>
 
-            <div className="form-group">
+            <div className="email">
               <label>Email</label>
               <input
                 type="email"
@@ -67,7 +66,7 @@ function Registration() {
               />
             </div>
 
-            <div className="form-group">
+            <div className="password">
               <label>Password</label>
               <input
                 type="password"
@@ -77,7 +76,7 @@ function Registration() {
               />
             </div>
 
-            <div className="form-group">
+            <div className="phone">
               <label>Phone No.</label>
               <input
                 type="Phone"
@@ -94,14 +93,14 @@ function Registration() {
               Already registered log in?
             </p>
             {flag && (
-              <p>I got it you are in hurry! But every Field is important!</p>
+              <p>I got it you are in a hurry! But every Field is important!</p>
             )}
           </form>
-        ) : (
-          <Login />
-        )}
-      </div>
-    </>
+        </div>
+      ) : (
+        <Login />
+      )}
+    </div>
   );
 }
 

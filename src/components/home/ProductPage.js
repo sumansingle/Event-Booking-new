@@ -7,7 +7,7 @@ const ProductPage = () => {
   const { addToCart } = useContext(CartContext);
 
   return (
-    <div>
+    <div className="cart-page">
       <h1>Products</h1>
       <div>
         {PRODUCTS.map((product) => (

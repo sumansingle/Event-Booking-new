@@ -33,36 +33,39 @@ function Login() {
   return (
     <div>
       {home ? (
-        <form onSubmit={handleLogin}>
-          <h3>LogIn</h3>
-          <div className="form-group">
-            <label>Email</label>
-            <input
-              type="email"
-              className="form-control"
-              placeholder="Enter email"
-              value={emaillog}
-              onChange={(event) => setEmaillog(event.target.value)}
-            />
-          </div>
+        <div className="from-ui">
+          <h2 className="heading">Log In</h2>
+          <form onSubmit={handleLogin}>
+            <h3>LogIn</h3>
+            <div className="form-group">
+              <label>Email</label>
+              <input
+                type="email"
+                className="form-control"
+                placeholder="Enter email"
+                value={emaillog}
+                onChange={(event) => setEmaillog(event.target.value)}
+              />
+            </div>
 
-          <div className="form-group">
-            <label>Password</label>
-            <input
-              type="password"
-              className="form-control"
-              placeholder="Enter password"
-              value={passwordlog}
-              onChange={(event) => setPasswordlog(event.target.value)}
-            />
-          </div>
+            <div className="form-group">
+              <label>Password</label>
+              <input
+                type="password"
+                className="form-control"
+                placeholder="Enter password"
+                value={passwordlog}
+                onChange={(event) => setPasswordlog(event.target.value)}
+              />
+            </div>
 
-          <button type="submit" className="btn btn-dark btn-lg btn-block">
-            Login
-          </button>
+            <button type="submit" className="btn btn-dark btn-lg btn-block">
+              Login
+            </button>
 
-          {flag && <p>Fill correct Info else keep trying.</p>}
-        </form>
+            {flag && <p>Fill correct Info else keep trying.</p>}
+          </form>
+        </div>
       ) : (
         <Home />
       )}
