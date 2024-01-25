@@ -7,20 +7,23 @@ import { CartProvider } from "./Create.context";
 import CheckOutPage from "./CheckOutPage";
 import Profile from "../Profile/Profile";
 
+
+
 function Home() {
   return (
     <>
-      <CartProvider>
-        <Router>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Products />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/checkout" element={<CheckOutPage />} />
-            <Route path="/profile" element={<Profile />} />
-          </Routes>
-        </Router>
-      </CartProvider>
+    <CartProvider>
+  <Router>
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<Products />} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/checkout" element={<CheckOutPage />} />
+      <Route path="/profile" element={<Profile />} />
+    </Routes>
+  </Router>
+</CartProvider>
+
     </>
   );
 }

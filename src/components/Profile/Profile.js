@@ -28,7 +28,7 @@ const Profile = () => {
     window.location.reload();
   };
   return (
-    <div>
+    <div className="cart-page">
       <h3>Profile</h3>
       {userEmail && <p>Email: {userEmail}</p>}
       {userId && <p>User ID: {userId}</p>}
